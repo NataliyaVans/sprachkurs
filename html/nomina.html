@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Nomina - Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <script src="https://kit.fontawesome.com/44ddede49e.js"></script>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/nomina.css">
+</head>
+<body>
+
+<div class="inhalt">
+    <div class="ueberschrift">Deklinations-Check</div>
+
+    <div class="infobox box">
+        <a href="../index.html" class="exit-link"><i class="fas fa-times"></i></a>
+        <h2 class="instruktion">Bitte beantworten Sie die folgenden <span class="fragen-gesamtanzahl"></span> Fragen zur Deklination.</h2>
+        <button type="button" class="btn btn-start" onclick="quizStarten()">Quiz starten <i class="far fa-play-circle"></i></button>
+    </div>
+
+    <div class="quizbox box hide">
+        <a href="../index.html" class="exit-link"><i class="fas fa-times"></i></a>
+        
+        <div class="status-zeile">
+            <div class="fragen-anzahl"></div>
+            <div class="kontrollanzeige"></div>
+        </div>
+
+        <div class="fragestellung"></div>
+        <div class="antwortmoeglichkeiten"></div>
+
+        <div class="naechste-frage-btn">
+            <button type="button" class="btn btn-next" onclick="next()">Weiter <i class="fas fa-arrow-circle-right"></i></button>
+        </div>
+    </div>
+
+    <div class="ergebnisbox box hide">
+        <a href="../index.html" class="exit-link"><i class="fas fa-times"></i></a>
+        <i class="fas fa-trophy trophy-icon"></i>
+        <h2>Ergebnis</h2>
+        <p class="ergebnis-text">Sie haben <span class="richtig-count"></span> von <span class="fragen-gesamtanzahl"></span> Fragen richtig beantwortet.</p>
+        
+        <div class="action-buttons">
+            <button type="button" class="btn" onclick="quizWiederholen()"><i class="fas fa-redo"></i> Erneut spielen</button>
+            <button type="button" class="btn btn-outline" onclick="location.href='../index.html'">Beenden</button>
+        </div>
+    </div>
+</div>
+
+<script src="../js/nomina.js"></script>
+</body>
+</html>

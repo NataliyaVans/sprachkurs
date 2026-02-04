@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Präpositionen Master</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <script src="https://kit.fontawesome.com/44ddede49e.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="../css/praepositionen.css">
+</head>
+<body>
+
+<div class="inhalt">
+    <div class="ueberschrift">Präpositionen</div>
+
+    <div class="background-box">
+        <a href="../index.html" class="exit-link"><i class="fas fa-times"></i></a>
+
+        <h3 class="instruktion">Ziehen Sie die Präpositionen in die richtigen Felder.</h3>
+
+        <div class="container1" id="wordPool">
+            <div id="draggable0" data-parent="in_front_of" class="draggable" draggable="true" ondragstart="drag(event)">vor</div>
+            <div id="draggable1" data-parent="under" class="draggable" draggable="true" ondragstart="drag(event)">unter</div>
+            <div id="draggable2" data-parent="on" class="draggable" draggable="true" ondragstart="drag(event)">auf</div>
+            <div id="draggable3" data-parent="over" class="draggable" draggable="true" ondragstart="drag(event)">über</div>
+            <div id="draggable4" data-parent="between" class="draggable" draggable="true" ondragstart="drag(event)">zwischen</div>
+            <div id="draggable5" data-parent="behind" class="draggable" draggable="true" ondragstart="drag(event)">hinter</div>
+            <div id="draggable6" data-parent="by" class="draggable" draggable="true" ondragstart="drag(event)">neben</div>
+            <div id="draggable7" data-parent="in" class="draggable" draggable="true" ondragstart="drag(event)">in</div>
+        </div>
+
+        <div class="container2">
+            <div class="box" data-owner="on" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="box" data-owner="by" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="box" data-owner="over" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="box" data-owner="under" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <img src="../img/auf.png" alt="auf">
+            <img src="../img/neben.png" alt="neben">
+            <img src="../img/ueber.png" alt="über">
+            <img src="../img/unter.png" alt="unter">
+
+            <div class="box" data-owner="between" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="box" data-owner="in_front_of" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="box" data-owner="in" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="box" data-owner="behind" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <img src="../img/zwischen.png" alt="zwischen">
+            <img src="../img/vor.png" alt="vor">
+            <img src="../img/in.png" alt="in">
+            <img src="../img/hinter.png" alt="hinter">
+        </div>
+
+        <div class="controls">
+            <button id="test" class="btn" onclick="check(this)">Prüfen</button>
+            <div id="result"></div>
+        </div>
+
+        <div class="neuesSpiel hide">
+            <button class="btn btn-restart" onclick="tryAgain()">
+                <i class="fas fa-redo"></i> Erneut spielen
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="../js/praepositionen.js"></script>
+</body>
+</html>

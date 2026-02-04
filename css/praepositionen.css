@@ -1,0 +1,150 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    background: #f0fcfa;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Verhindert Scrolling der gesamten Seite */
+}
+
+.inhalt {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 800px; /* Etwas breiter für das 4er Grid */
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.ueberschrift {
+    text-align: center;
+    font-size: clamp(18px, 4vh, 24px);
+    font-weight: bold;
+    color: #12a6a4;
+    padding: 5px 0;
+}
+
+.background-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(18, 166, 164, 0.2);
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.instruktion {
+    text-align: center;
+    color: #444;
+    font-size: 16px;
+    margin: 30px 0 15px 0; /* Platz für das Exit-Kreuz */
+}
+
+/* Exit-Kreuz (Synchron zum anderen Spiel) */
+.exit-link {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    color: #ff7675;
+    font-size: 28px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+/* Wörter Pool */
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 15px;
+    background: #f7fefe;
+    border-radius: 8px;
+    border: 1px dashed #12a6a4;
+    margin-bottom: 20px;
+}
+
+.draggable {
+    background: white;
+    border: 2px solid #12a6a4;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-weight: bold;
+    color: #12a6a4;
+    cursor: move;
+    transition: 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.draggable:hover { background: #d2f7f6; }
+
+/* Grid Bereich */
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.box {
+    height: 50px;
+    background: #f0fcfa;
+    border: 2px dashed #12a6a4;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.container2 img {
+    width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+    padding: 5px;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: #12a6a4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-clicked { background: #0e817f; }
+
+.btn-restart {
+    background: white;
+    color: #12a6a4;
+    border: 2px solid #12a6a4;
+    margin-top: 10px;
+}
+
+#result {
+    text-align: center;
+    font-weight: bold;
+    color: #12a6a4;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.hide { display: none !important; }
+
+@media (max-width: 600px) {
+    .container2 { grid-template-columns: repeat(2, 1fr); }
+    .instruktion { font-size: 14px; }
+}

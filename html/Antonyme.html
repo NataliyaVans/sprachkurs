@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Antonyme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <script src="https://kit.fontawesome.com/44ddede49e.js"></script>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="../css/antonyme.css">
+</head>
+<body>
+
+<div class="inhalt">
+    <div class="ueberschrift">Antonyme</div>
+
+    <div id="introBox" class="box">
+        <a href="../index.html" class="exit-link"><i class="fas fa-times"></i></a>
+        <h3 style="text-align: center; color: #12a6a4; margin-top: 10px;">Vokabel-Check</h3>
+        <p style="text-align: center; color: #666; font-size: 14px; margin-bottom: 15px;">Prägen Sie sich diese Wörter ein:</p>
+        
+        <div class="scroll-table">
+            <table id="learnTable"></table>
+        </div>
+        
+        <button class="btn" onclick="spielStarten()">Spiel starten</button>
+    </div>
+
+    <div id="gameBox" class="box spielfeld-container hide">
+        <a href="../index.html" class="exit-link"><i class="fas fa-times"></i></a>
+        
+        <div class="spielbox" id="gameArea"></div>
+        
+        <div class="result-bar">
+            <span>Punkte: <span id="score">0</span></span>
+            <span>Versuche: <span id="moves">0</span></span>
+        </div>
+
+        <div id="endOverlay" class="hide">
+            <i class="fas fa-trophy" style="font-size: 50px; color: #f1c40f; margin-bottom: 10px;"></i>
+            <h2 style="color: #12a6a4;">Geschafft!</h2>
+            <p id="finalStats" style="margin: 15px 0; font-size: 18px; color: #444;"></p>
+            <button class="btn" onclick="location.reload()">Nochmal spielen</button>
+            <button class="btn btn-outline" onclick="location.href='../index.html'">Beenden</button>
+        </div>
+    </div>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="../js/antonyme.js"></script>
+</body>
+</html>
